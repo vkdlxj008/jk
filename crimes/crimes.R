@@ -18,11 +18,11 @@ subject_clean <- remove_outliers(subject_clean, "Y.Coordinate")
 
 subject_clean1 <- subject_clean %>%
   mutate(Day = as.Date(mdy_hms(Date))) %>%
-  group_by(Day, Year, Arrest) %>%
-  summarize(crime_counts = n(), .groups = "drop")
+  group_by(Day) %>%
+  summarize(crime_counts = n()) %>%
+  mutate(Year = year(Day))
 
-
-# 펜데믹 기간별 데이터 필터링
+# 펜데믹 기간별 데이터 필터링 및 "Period" 열 추가
 pandemic_before <- subject_clean1 %>%
   filter(Year >= 2017 & Year <= 2019) %>%
   mutate(Period = "Pandemic Before")
@@ -32,9 +32,7 @@ pandemic_period <- subject_clean1 %>%
 pandemic_after <- subject_clean1 %>%
   filter(Year >= 2022 & Year <= 2023) %>%
   mutate(Period = "Pandemic After")
-arrests <- subject_clean1 %>%
-  filter(Arrest == TRUE) %>%
-  mutate(Period = "Arrests")
+
 
 # 히스토그램 그리기
 ggplot() +
