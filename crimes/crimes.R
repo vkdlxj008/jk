@@ -1,3 +1,7 @@
+- Performed data cleaning, outlier removal, and visualization of crime data using R
+- Generated plots and interpreted trends related to crime patterns during different periods
+- Tools used: R, ggplot2, dplyr
+
 library(tidyverse)
 library(lubridate)
 
