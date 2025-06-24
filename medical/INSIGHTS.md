@@ -1,7 +1,7 @@
 Insurance Cost Analysis Project
 
 Project Overview
-This is a personal data analysis project conducted using Tableau to analyze factors affecting insurance costs. Through visualized analysis, the following insights were derived:
+This is a personal data analysis project conducted using Tableau to analyze factors affecting insurance costs. The final dashboard version is saved as 2nddraftmedical.PNG. Through visualized analysis, the following insights were derived:
 
 Key Findings
 1. Regional Comparison of BMI and Insurance Costs
