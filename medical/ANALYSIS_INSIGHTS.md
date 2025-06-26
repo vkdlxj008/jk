@@ -98,3 +98,7 @@ Through visualized analysis, the following insights were derived:
 Tool: Tableau for data visualization and analysis
 Approach: Multi-dimensional analysis using various chart types
 Focus: Identifying key cost drivers and their interactions
+Data Source: 
+- Kaggle Dataset: "Medical Cost Personal Datasets" by mirichoi0218 
+  (https://www.kaggle.com/datasets/mirichoi0218/insurance)
+- Original Source: Lantz, B. "Machine Learning with R"
