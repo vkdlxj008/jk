@@ -1,7 +1,7 @@
 # 📊 Insurance Cost Analysis Project
 
 ## 🎯 Project Overview
-This project analyzes factors affecting insurance costs using real-world data. The main tools used are SQL for data extraction and Tableau for visualization. The analysis aims to uncover regional and demographic patterns influencing insurance premiums.
+This project analyzes factors affecting insurance costs using **Tableau** for visualization. The analysis uncovers regional and demographic patterns influencing insurance premiums.
 
 ## 🗂️ Project Structure
 ```
@@ -9,32 +9,50 @@ medical/insurance-cost-analysis/
 ├── sql/              # SQL scripts for data setup and analysis
 │   ├── 01-setup.sql
 │   └── 02-comprehensive_analysis.sql
-├── results/          # Analysis output files (CSV, summaries)
+├── results/         # SQL analysis outputs (in progress)
 │   └── premium_ranking.csv
-├── visuals/          # Visualizations and dashboards (Tableau exports)
+├── visuals/             # Tableau dashboards and visualizations
 │   └── 2nddraftmedical.PNG
-├── insights/         # Markdown insights and analysis reports
+├── insights/          # Analysis reports and findings
 │   └── ANALYSIS_INSIGHTS.md
 └── README.md         # This README file
 ```
 
 ## 📈 Key Highlights
-- Conducted exploratory data analysis to identify patterns in insurance costs.
-- Compared BMI and insurance charges across regions (Northeast, Northwest, Southeast, Southwest).
-- Identified Southeast region as having the highest BMI and insurance costs.
-- Created visual dashboards for clear communication of insights.
+- **Smoking status** is the strongest predictor of insurance costs (300%+ increase)
+- **Southeast region** shows highest average charges and BMI
+- **Positive correlation** between BMI and insurance charges
+- Comprehensive demographic analysis by gender and smoking status
+
+# 🔬 Analysis Components
+
+## 📊 Tableau Visualization (Completed)
+
+Interactive dashboard analyzing insurance cost patterns
+Regional comparison charts
+Demographic breakdowns
+Statistical correlation analysis
+
+## 🗄️ SQL Analysis (In Progress)
+
+Database setup and data preprocessing
+Advanced statistical queries
+Comprehensive cost factor analysis
+Additional insights to complement Tableau findings
 
 ## 🔜 Future Work
-- Add more CSV datasets to enrich the analysis.
-- Extend SQL scripts to integrate new data.
-- Update visualizations and insights accordingly.
 
-## 📂 How to Run
-1. Use the SQL scripts in the `sql/` folder to set up and query the database.
-2. Review CSV outputs in the `results/` folder.
-3. Open the dashboards and images in `visuals/` for visual analysis.
-4. Read detailed insights in the `insights/` markdown files.
+Complete SQL-based statistical analysis
+Integrate SQL findings with Tableau insights
+Add predictive modeling components
+Expand dataset with additional variables
 
----
+## 📂 How to Explore
 
+Start with visuals: View the main dashboard in visuals/2nddraftmedical.PNG
+Read insights: Check insights/ANALYSIS_INSIGHTS.md for detailed findings
+SQL work: Review ongoing SQL analysis in the sql/ folder
+Results: Check results/ folder for SQL analysis outputs
+
+--------------------------------------------------------------------------------------
 If you have any questions or feedback, feel free to reach out!
