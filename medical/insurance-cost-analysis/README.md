@@ -17,6 +17,7 @@ medical/insurance-cost-analysis/
 │   └── ANALYSIS_INSIGHTS.md
 └── README.md         # This README file
 
+
 ## 📈 Key Highlights
 - Conducted exploratory data analysis to identify patterns in insurance costs.
 - Compared BMI and insurance charges across regions (Northeast, Northwest, Southeast, Southwest).
