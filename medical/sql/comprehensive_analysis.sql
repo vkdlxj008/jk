@@ -162,22 +162,28 @@ FROM insurance_analysis.insurance_data
 WHERE smoker = 'no' AND bmi < 30;
 
 -- 5-2. Profile analysis of top 10% premium customers
-SELECT 
-    age AS age,
-    sex AS gender,
-    bmi AS BMI,
-    children AS number_of_children,
-    smoker AS smoking_status,
-    region AS region,
-    charges AS premium,
-    RANK() OVER (ORDER BY charges DESC) AS premium_rank
-FROM insurance_analysis.insurance_data
-WHERE charges >= (
-    SELECT DISTINCT charges 
-    FROM insurance_analysis.insurance_data 
-    ORDER BY charges DESC 
-    LIMIT 1 OFFSET (SELECT FLOOR(COUNT(*) * 0.1) FROM insurance_analysis.insurance_data)
+-- First, calculate OFFSET values with variables
+SET @offset_val = (
+  SELECT FLOOR(COUNT(*) * 0.1)
+  FROM insurance_analysis.insurance_data
+);
+
+-- Then, the reference cutoff value is obtained
+WITH ranked_data AS (
+  SELECT *,
+         PERCENT_RANK() OVER (ORDER BY charges DESC) AS pr
+  FROM insurance_analysis.insurance_data
 )
+SELECT age,
+       sex,
+       bmi AS BMI,
+       children,
+       smoker,
+       region,
+       charges,
+       RANK() OVER (ORDER BY charges DESC) AS premium_ranking
+FROM ranked_data
+WHERE pr <= 0.1
 ORDER BY charges DESC;
 
 -- 5-3. Data summary statistics
