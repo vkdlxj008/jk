@@ -6,7 +6,7 @@ Welcome! This repository showcases three data analysis projects focusing on real
 
 ## 🏥 Project 1: Insurance Cost Analysis  
 **Date**: August 2024  
-**Tools**: Tableau, Excel,SQL
+**Tools**: Tableau (Primary), SQL (Setup)
 
 ### 🔍 Overview  
 This project analyzes the impact of smoking, BMI, and region on healthcare insurance costs across four U.S. regions.
@@ -14,14 +14,14 @@ This project analyzes the impact of smoking, BMI, and region on healthcare insur
 ### 📌 Key Insights  
 - **Smoking** is the **strongest cost driver**, increasing insurance charges by **300%+**.  
 - The **Southeast region** shows the **highest average charges (₩12,142)** and BMI.  
-- A **positive trend** exists between BMI and insurance charges.  
-- Demographic breakdown (sex + smoker status) reveals significant differences in average cost.
+- **Positive correlation** exists between BMI and insurance costs
+- **Gender + smoking status** reveals significant cost variations
 
 ### 📈 Visualizations  
-- Bar + line chart comparing **BMI & Charges by region**  
-- Scatter plot showing **BMI vs. Charges** correlation  
-- Demographic table for **Sex & Smoking status**  
-- Bar chart for **average charge by smoker status**
+- Regional comparison (BMI & charges by region)
+- BMI vs charges scatter plot with trend line
+- Demographic cost breakdown table
+- Smoking status impact analysis
 
 🔗 [View Full Analysis](https://github.com/vkdlxj008/jk/blob/main/medical/insurance-csot-analysis/insights/ANALYSIS_INSIGHTS.md)
 
