@@ -3,7 +3,7 @@
 ## 🎯 Project Overview
 This is a personal data analysis project conducted using **Tableau** to analyze factors affecting insurance costs. The final dashboard version is saved as `2nddraftmedical.PNG`. 
 
-![Insurance Cost Analysis Dashboard](visuals/2nddraftmedical.PNG)
+![Insurance Cost Analysis Dashboard](insurance-cost-analysis/visuals/2nddraftmedical.PNG)
 
 Through visualized analysis, the following insights were derived:
 
