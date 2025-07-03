@@ -6,21 +6,17 @@ This project analyzes factors affecting insurance costs using real-world data. T
 ## 🗂️ Project Structure
 
 medical/insurance-cost-analysis/
-│
-├── sql/ # SQL scripts for data setup and analysis
-│ ├── 01-setup.sql
-│ └── 02-comprehensive_analysis.sql
-│
-├── results/ # Analysis output files (CSV, summaries)
-│ └── premium_ranking.csv
-│
-├── visuals/ # Visualizations and dashboards (Tableau exports)
-│ └── 2nddraftmedical.PNG
-│
-├── insights/ # Markdown insights and analysis reports
-│ └── ANALYSIS_INSIGHTS.md
-│
-└── README.md # This README file
+├── sql/              # SQL scripts for data setup and analysis
+│   ├── 01-setup.sql
+│   └── 02-comprehensive_analysis.sql
+├── results/          # Analysis output files (CSV, summaries)
+│   └── premium_ranking.csv
+├── visuals/          # Visualizations and dashboards (Tableau exports)
+│   └── 2nddraftmedical.PNG
+├── insights/         # Markdown insights and analysis reports
+│   └── ANALYSIS_INSIGHTS.md
+└── README.md         # This README file
+
 
 
 ## 📈 Key Highlights
