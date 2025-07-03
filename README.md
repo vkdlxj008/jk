@@ -6,7 +6,7 @@ Welcome! This repository showcases three data analysis projects focusing on real
 
 ## 🏥 Project 1: Insurance Cost Analysis  
 **Date**: August 2024  
-**Tools**: Tableau, Excel  
+**Tools**: Tableau, Excel,SQL
 
 ### 🔍 Overview  
 This project analyzes the impact of smoking, BMI, and region on healthcare insurance costs across four U.S. regions.
@@ -23,7 +23,7 @@ This project analyzes the impact of smoking, BMI, and region on healthcare insur
 - Demographic table for **Sex & Smoking status**  
 - Bar chart for **average charge by smoker status**
 
-🔗 [View Full Analysis](https://github.com/vkdlxj008/jk/blob/main/medical/ANALYSIS_INSIGHTS.md)
+🔗 [View Full Analysis](https://github.com/vkdlxj008/jk/blob/main/medical/insurance-csot-analysis/insights/ANALYSIS_INSIGHTS.md)
 
 ---
 
