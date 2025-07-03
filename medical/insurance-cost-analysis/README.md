@@ -17,25 +17,18 @@ medical/insurance-cost-analysis/
 │   └── ANALYSIS_INSIGHTS.md
 └── README.md         # This README file
 
-
-
 ## 📈 Key Highlights
-
 - Conducted exploratory data analysis to identify patterns in insurance costs.
 - Compared BMI and insurance charges across regions (Northeast, Northwest, Southeast, Southwest).
 - Identified Southeast region as having the highest BMI and insurance costs.
 - Created visual dashboards for clear communication of insights.
 
 ## 🔜 Future Work
-
 - Add more CSV datasets to enrich the analysis.
 - Extend SQL scripts to integrate new data.
 - Update visualizations and insights accordingly.
 
----
-
 ## 📂 How to Run
-
 1. Use the SQL scripts in the `sql/` folder to set up and query the database.
 2. Review CSV outputs in the `results/` folder.
 3. Open the dashboards and images in `visuals/` for visual analysis.
@@ -43,4 +36,4 @@ medical/insurance-cost-analysis/
 
 ---
 
-If you have any questions or suggestions, feel free to reach out!
+If you have any questions or feedback, feel free to reach out!
