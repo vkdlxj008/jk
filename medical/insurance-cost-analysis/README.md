@@ -49,10 +49,10 @@ Expand dataset with additional variables
 
 ## 📂 How to Explore
 
-Start with visuals: View the main dashboard in visuals/2nddraftmedical.PNG
-Read insights: Check insights/ANALYSIS_INSIGHTS.md for detailed findings
-SQL work: Review ongoing SQL analysis in the sql/ folder
-Results: Check results/ folder for SQL analysis outputs
+1. **Start with visuals**: View the main dashboard in visuals/2nddraftmedical.PNG
+2. **Read insights**: Check insights/ANALYSIS_INSIGHTS.md for detailed findings
+3. **SQL work**: Review ongoing SQL analysis in the sql/ folder
+4. **Results**: Check results/ folder for SQL analysis outputs
 
 --------------------------------------------------------------------------------------
 If you have any questions or feedback, feel free to reach out!
