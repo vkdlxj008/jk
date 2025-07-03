@@ -4,7 +4,7 @@
 This project analyzes factors affecting insurance costs using real-world data. The main tools used are SQL for data extraction and Tableau for visualization. The analysis aims to uncover regional and demographic patterns influencing insurance premiums.
 
 ## 🗂️ Project Structure
-
+'''
 medical/insurance-cost-analysis/
 ├── sql/              # SQL scripts for data setup and analysis
 │   ├── 01-setup.sql
@@ -16,7 +16,7 @@ medical/insurance-cost-analysis/
 ├── insights/         # Markdown insights and analysis reports
 │   └── ANALYSIS_INSIGHTS.md
 └── README.md         # This README file
-
+'''
 
 ## 📈 Key Highlights
 - Conducted exploratory data analysis to identify patterns in insurance costs.
