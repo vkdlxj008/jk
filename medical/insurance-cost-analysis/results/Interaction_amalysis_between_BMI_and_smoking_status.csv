@@ -1,0 +1,9 @@
+BMI_category,smoking_status,people_count,average_premium
+Normal,no,175,7685.66
+Normal,yes,50,19942.22
+Obese,no,562,8842.69
+Obese,yes,145,41557.99
+Overweight,no,312,8257.96
+Overweight,yes,74,22495.87
+Underweight,no,15,5532.99
+Underweight,yes,5,18809.83
