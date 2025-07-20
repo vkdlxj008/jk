@@ -6,24 +6,40 @@ Welcome! This repository showcases three data analysis projects focusing on real
 
 ## 🏥 Project 1: Insurance Cost Analysis  
 **Date**: August 2024  
-**Tools**: Tableau (Primary), SQL (Setup)
+**Tools**: SQL (Advanced Analysis), Tableau (Interactive Dashboard)
 
 ### 🔍 Overview  
-This project analyzes the impact of smoking, BMI, and region on healthcare insurance costs across four U.S. regions.
+Comprehensive dual-methodology analysis of healthcare insurance costs using both SQL statistical analysis and Tableau visualization. This project examines 1,338 insurance records to identify key premium determinants and validate findings through cross-platform comparison.
 
-### 📌 Key Insights  
-- **Smoking** is the **strongest cost driver**, increasing insurance charges by **300%+**.  
-- The **Southeast region** shows the **highest average charges (₩12,142)** and BMI.  
-- **Positive correlation** exists between BMI and insurance costs
-- **Gender + smoking status** reveals significant cost variations
+### 📌 Key Statistical Findings  
+- **Smoking impact**: **280% premium increase** ($32,050 vs $8,434 average)
+- **Regional variations**: **Southeast region** shows highest costs ($14,735) with 25% smoking rate
+- **BMI correlation**: **Obese individuals** pay $15,552 average (52.8% of population)  
+- **High-risk segment**: **Obese smokers** average $41,558 (5.2x general population)
+- **Methodology validation**: Both SQL and Tableau confirm smokers pay **3-4x more**
 
-### 📈 Visualizations  
-- Regional comparison (BMI & charges by region)
-- BMI vs charges scatter plot with trend line
-- Demographic cost breakdown table
-- Smoking status impact analysis
+### 🔬 Technical Implementation
+- **Advanced SQL**: Window functions, subqueries, CASE statements for multi-dimensional analysis
+- **Statistical rigor**: PERCENT_RANK, STDDEV, conditional aggregation for precise calculations
+- **Interactive dashboard**: Multi-variable correlation analysis with drill-down capabilities
+- **Cross-validation**: Dual methodology ensures analytical reliability
 
-🔗 [View Full Analysis](https://github.com/vkdlxj008/jk/blob/main/medical/insurance-csot-analysis/insights/ANALYSIS_INSIGHTS.md)
+### 📈 Visualizations & Analysis  
+- **SQL Results**: 7 detailed CSV reports with exact statistical breakdowns
+- **Tableau Dashboard**: Regional BMI vs cost comparison, demographic breakdown tables
+- **Risk Segmentation**: High-risk group identification through systematic categorization
+- **Methodology Comparison**: Comprehensive SQL vs Tableau analysis report
+
+### 💼 Business Impact
+- **Risk-based pricing strategy**: Clear premium multipliers by risk factors
+- **Geographic insights**: 15-20% regional rate adjustments recommended  
+- **Wellness program targeting**: ROI-driven obesity and smoking cessation focus
+- **Predictive accuracy**: 5.2x risk differentiation through combined factors
+
+🔗 [View Complete Analysis](https://github.com/vkdlxj008/jk/tree/main/medical/insurance-cost-analysis)  
+📊 [SQL Analysis Report](https://github.com/vkdlxj008/jk/blob/main/medical/insurance-cost-analysis/reports/sql-analysis-results.md)  
+📈 [Tableau Insights](https://github.com/vkdlxj008/jk/blob/main/medical/insurance-cost-analysis/reports/tableau-insights.md)  
+🔍 [Methodology Comparison](https://github.com/vkdlxj008/jk/blob/main/medical/insurance-cost-analysis/reports/methodology-comparison.md)
 
 ---
 
