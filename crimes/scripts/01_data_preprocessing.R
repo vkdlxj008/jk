@@ -1,7 +1,7 @@
 library(dplyr)
 library(lubridate)
 
-subject <- read.csv("C:/Users/BYU Rental/Downloads/Crimes.csv")
+subject <- read.csv("Crimes.csv")
 daily_crimes <- subject |>
   mutate(Day= as.Date(mdy_hms(Date))) |>
   group_by(Day, Year, Primary.Type, Location.Description) |>
