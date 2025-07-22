@@ -8,5 +8,4 @@ daily_crimes <- subject |>
   summarize(count =n()) |>
   ungroup()
   View(daily_crimes)
-  
-write.csv(daily_crimes, "C:/Users/BYU Rental/Downloads/daily_crimes.csv", row.names = FALSE)
+  write.csv("daily_crimes_summary.csv")
