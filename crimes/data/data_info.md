@@ -34,17 +34,49 @@
 | Longitude | Float | Longitude coordinate | -87.70295942 |
 | Location | String | Coordinate pair | (41.880594385, -87.702959421) |
 
-## Data Preprocessing Process
+## Data Processing Pipeline
+
+### Stage 1: Initial Aggregation (`01_data_preprocessing.R`)
 1. Load original CSV file (approximately 118,992K rows from District 11)
-2. Convert Date column to proper Date format
-3. Aggregate data by day, crime type, and location for storage optimization
-4. Save processed data as `daily_crimes_summary.csv`
+2. Convert Date column to proper Date format using `mdy_hms()`
+3. Group by Day, Year, Primary Type, and Location Description
+4. Count incidents per group
+5. Save as `daily_crimes_summary.csv`
+
+### Stage 2: Summary Generation (`01b_generate_summaries.R`)
+From the daily aggregated data, generate multiple summary files:
+
+#### Generated Files:
+- **`daily_crimes_summary.csv`** - Daily aggregated crime data (primary dataset)
+- **`monthly_summary.csv`** - Monthly aggregations by crime type and location
+- **`crime_types_summary.csv`** - Summary statistics by crime type
+- **`locations_summary.csv`** - Summary statistics by location type
+- **`cleaned_data.rds`** - R data structure containing all processed datasets
+
+#### Additional Reference Files:
+- `monthly_totals.csv` - Monthly overall statistics
+- `crime_yearly_trends.csv` - Annual trends by crime type
+- `location_yearly_trends.csv` - Annual trends by location type
+
+## File Descriptions
+
+### Primary Analysis Files
+- **`daily_crimes_summary.csv`**: Base aggregated dataset with daily crime counts by type and location
+- **`monthly_summary.csv`**: Monthly aggregations with statistics like total crimes, days with crime, and daily averages
+- **`crime_types_summary.csv`**: Comprehensive statistics for each crime type including totals, averages, date ranges, and most common locations
+- **`locations_summary.csv`**: Comprehensive statistics for each location type including totals, averages, date ranges, and most common crime types
+
+### Support Files
+- **`cleaned_data.rds`**: R binary format containing all datasets plus metadata
+- Additional CSV files for yearly trend analysis
 
 ## Reproduction Method
 To reproduce analysis with source data:
 1. Download latest data from City of Chicago Data Portal
-2. Run `scripts/01_data_preprocessing.R` to generate aggregated data
-3. Execute analysis using `scripts/02_analysis.R`
+2. Filter for District 11 data only
+3. Run `scripts/01_data_preprocessing.R` to generate `daily_crimes_summary.csv`
+4. Run `scripts/01b_generate_summaries.R` to create all summary files
+5. Execute analysis using `scripts/02_analysis.R`
 
 ## Important Notes
 - **Geographic Scope**: This dataset contains only District 11 (Harrison District) crime data
@@ -57,3 +89,4 @@ To reproduce analysis with source data:
 - Analysis represents only one district out of 25 Chicago police districts
 - Results cannot be generalized to entire Chicago metropolitan area
 - For city-wide analysis, full dataset download required from source
+- Data aggregated to daily level may mask intra-day patterns
