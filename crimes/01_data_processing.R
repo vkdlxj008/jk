@@ -1,0 +1,12 @@
+library(dplyr)
+library(lubridate)
+
+subject <- read.csv("C:/Users/BYU Rental/Downloads/Crimes.csv")
+daily_crimes <- subject |>
+  mutate(Day= as.Date(mdy_hms(Date))) |>
+  group_by(Day, Year, Primary.Type, Location.Description) |>
+  summarize(count =n()) |>
+  ungroup()
+  View(daily_crimes)
+  
+write.csv(daily_crimes, "C:/Users/BYU Rental/Downloads/daily_crimes.csv", row.names = FALSE)
