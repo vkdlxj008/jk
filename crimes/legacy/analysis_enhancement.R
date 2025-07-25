@@ -27,23 +27,23 @@ subject_clean <- remove_outliers(subject_clean, "Y.Coordinate")
 # === 1. Statistical Test: Pre/During/Post Pandemic ===
 
 # Prepare daily crime counts
-subject_clean1 <- subject_clean %>%
-  mutate(Day = as.Date(mdy_hms(Date))) %>%
-  group_by(Day) %>%
-  summarize(crime_counts = n()) %>%
+subject_clean1 <- subject_clean |>
+  mutate(Day = as.Date(mdy_hms(Date))) |>
+  group_by(Day) |>
+  summarize(crime_counts = n()) |>
   mutate(Year = year(Day))
 
 # Split data into periods
-pandemic_before <- subject_clean1 %>%
-  filter(Year >= 2017 & Year <= 2019) %>%
+pandemic_before <- subject_clean1 |>
+  filter(Year >= 2017 & Year <= 2019) |>
   mutate(Period = "Before")
 
-pandemic_period <- subject_clean1 %>%
-  filter(Year >= 2020 & Year <= 2021) %>%
+pandemic_period <- subject_clean1 |>
+  filter(Year >= 2020 & Year <= 2021) |>
   mutate(Period = "During")
 
-pandemic_after <- subject_clean1 %>%
-  filter(Year >= 2022 & Year <= 2023) %>%
+pandemic_after <- subject_clean1 |>
+  filter(Year >= 2022 & Year <= 2023) |>
   mutate(Period = "After")
 
 # Combine all periods for analysis
@@ -79,11 +79,11 @@ print(paste("During vs After:", round(cohen_during_after$estimate, 3)))
 # === 2. Time Series Analysis ===
 
 # Monthly trends with moving average and labels
-monthly_data <- subject_clean %>%
+monthly_data <- subject_clean |>
   mutate(Date = as.Date(mdy_hms(Date)),
-         YearMonth = floor_date(Date, "month")) %>%
-  group_by(YearMonth) %>%
-  summarize(crime_counts = n()) %>%
+         YearMonth = floor_date(Date, "month")) |>
+  group_by(YearMonth) |>
+  summarize(crime_counts = n()) |>
   mutate(
     Year = year(YearMonth),
     Month = month(YearMonth),
@@ -123,24 +123,24 @@ ggsave('Monthly_Trends.png', p_timeseries, width = 12, height = 6)
 # === 3. Analysis by Crime Type ===
 
 # Compare crime types by period
-crime_type_analysis <- subject_clean %>%
+crime_type_analysis <- subject_clean |>
   mutate(Date = as.Date(mdy_hms(Date)),
          Year = year(Date),
          Period = case_when(
            Year <= 2019 ~ "Before",
            Year %in% 2020:2021 ~ "During",
            Year >= 2022 ~ "After"
-         )) %>%
-  filter(!is.na(Period), !is.na(Primary.Type)) %>%
-  group_by(Primary.Type, Period) %>%
-  summarize(crime_count = n(), .groups = "drop") %>%
-  pivot_wider(names_from = Period, values_from = crime_count, values_fill = 0) %>%
+         )) |>
+  filter(!is.na(Period), !is.na(Primary.Type)) |>
+  group_by(Primary.Type, Period) |>
+  summarize(crime_count = n(), .groups = "drop") |>
+  pivot_wider(names_from = Period, values_from = crime_count, values_fill = 0) |>
   mutate(
     pct_change_during = ((During - Before) / Before) * 100,
     pct_change_after = ((After - Before) / Before) * 100,
     total_crimes = Before + During + After
   ) %>%
-  filter(total_crimes >= 100) %>%
+  filter(total_crimes >= 100) |>
   arrange(pct_change_during)
 
 # Top 10 most decreased/increased crimes during pandemic
@@ -151,15 +151,15 @@ print("=== Top 10 Crime Types with Biggest Increase During Pandemic ===")
 print(tail(crime_type_analysis[, c("Primary.Type", "pct_change_during")], 10))
 
 # Create heatmap (Top 15 most frequent types)
-top_crimes <- crime_type_analysis %>%
-  top_n(15, total_crimes) %>%
+top_crimes <- crime_type_analysis |>
+  top_n(15, total_crimes) |>
   pull(Primary.Type)
 
-heatmap_data <- crime_type_analysis %>%
-  filter(Primary.Type %in% top_crimes) %>%
-  select(Primary.Type, Before, During, After) %>%
+heatmap_data <- crime_type_analysis |>
+  filter(Primary.Type %in% top_crimes) |>
+  select(Primary.Type, Before, During, After) |>
   pivot_longer(cols = c(Before, During, After), 
-               names_to = "Period", values_to = "Count") %>%
+               names_to = "Period", values_to = "Count") |>
   mutate(Period = factor(Period, levels = c("Before", "During", "After")))
 
 p_heatmap <- ggplot(heatmap_data, aes(x = Period, y = reorder(Primary.Type, Count))) +
@@ -175,8 +175,8 @@ p_heatmap <- ggplot(heatmap_data, aes(x = Period, y = reorder(Primary.Type, Coun
 ggsave('Crime_Types_Heatmap.png', p_heatmap, width = 10, height = 8)
 
 # Bar plot: percentage change
-p_change <- crime_type_analysis %>%
-  filter(Primary.Type %in% top_crimes) %>%
+p_change <- crime_type_analysis |>
+  filter(Primary.Type %in% top_crimes) |>
   ggplot(aes(x = reorder(Primary.Type, pct_change_during), 
              y = pct_change_during)) +
   geom_col(aes(fill = pct_change_during > 0)) +
@@ -187,17 +187,21 @@ p_change <- crime_type_analysis %>%
        subtitle = "Compared to Pre-Pandemic Period",
        x = "Crime Type", y = "Percentage Change (%)") +
   theme_minimal() +
-  geom_hline(yintercept = 0, linetype
+  geom_hline(yintercept = 0, linetype = "dashhed")
+
+ggsave('Crime_Change_Rates.png', p_change, width = 10, height = 8)
              
 
-# 결과를 CSV로 저장
-write.csv(summary_stats, "pandemic_crime_summary.csv", row.names = FALSE)
-write.csv(crime_type_analysis, "crime_type_analysis.csv", row.names = FALSE)
+# Summary
+summary_stats <- combined_data |>
+  group_by(Period) |>
+  summarise(
+    mean_daily_crimes = round(mean(crime_counts), 2),
+    median_daily_crimes = round(median(crime_counts), 2),
+    sd_daily_crimes = round(sd(crime_counts), 2),
+    min_daily_crimes = min(crime_counts),
+    max_daily_crimes = max(crime_counts),
+    total_days = n()
+  )
 
-print("=== Analysis Complete ===")
-print("Files saved:")
-print("- Monthly_Trends.png")
-print("- Crime_Types_Heatmap.png") 
-print("- Crime_Change_Rates.png")
-print("- pandemic_crime_summary.csv")
-print("- crime_type_analysis.csv")
+print(summary_stats)
