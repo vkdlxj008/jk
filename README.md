@@ -66,20 +66,32 @@ This project examines how various social factors influence high school graduatio
 
 ## 🕵️ Project 3: COVID-19 and Crime Rate Analysis  
 **Date**: April 2024  
-**Tools**: R, ggplot2  
+**Tools**: R, tidyverse, ggplot2, plotly, changepoint, effsize 
 
 ### 🔍 Overview  
-This project investigates changes in local crime rates **before, during, and after** the COVID-19 pandemic using kernel density estimation.
+This project provides a comprehensive analysis of crime trends in Chicago **before, during, and after** the COVID-19 pandemic. Leveraging publicly available data from the Chicago Police Department and advanced statistical techniques, the project quantifies the pandemic’s impact on crime patterns.
 
 ### 📌 Key Insights  
-- **Crime density significantly dropped** during the pandemic period.  
-- Post-pandemic crime remained **lower than pre-pandemic levels**, suggesting a lasting behavioral or policy effect.  
-- Policy suggestion: **Maintain certain public regulations** post-pandemic to sustain lower crime levels.
+- 📉 **Significant Reductions**: Crime rates dropped noticeably during the pandemic due to lockdowns and reduced public activity.
+
+- 📊 **Statistical Validation**: Kruskal-Wallis and post-hoc Wilcoxon tests confirmed significant differences in crime levels across the three periods (pre-, during-, post-pandemic).
+
+- 🧠 **Effect Sizes**: Cohen’s d revealed medium to large effect sizes in key crime categories.
+
+- 🔁 **Incomplete Recovery**: While some crime types rebounded after 2021, others remained significantly lower or changed in character.
+
+- 📋 **Policy Implications**: Suggested sustaining certain public safety measures post-pandemic to preserve lower crime rates.
 
 ### 📈 Visualizations  
-- Overlaid **density plots** of crime rate distributions across three periods (before, during, after pandemic)
+- 📅 **Time Series Plots**: Crime trends by month, annotated by pandemic phase
 
-🔗 [View Full Analysis](https://github.com/vkdlxj008/jk/blob/main/crimes/crimes.R)
+- 🗺 **Geographic Heatmaps**: Crime intensity by location across periods
+
+- 🧮 **Distribution Plots**: Boxplots and density charts showing spread and central tendencies
+
+- 📊 **Interactive Charts**: Plotly-based tools for exploring trends by type, location, and time
+
+🔗 [View Full Analysis](https://github.com/vkdlxj008/jk/blob/main/crimes)  Includes one-click reproducible analysis, pre-processed data, statistical scripts, and auto-generated reports.
 
 ---
 
