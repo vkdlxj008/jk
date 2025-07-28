@@ -24,12 +24,6 @@ Comprehensive dual-methodology analysis of healthcare insurance costs using both
 - **Interactive dashboard**: Multi-variable correlation analysis with drill-down capabilities
 - **Cross-validation**: Dual methodology ensures analytical reliability
 
-### 📈 Visualizations & Analysis  
-- **SQL Results**: 7 detailed CSV reports with exact statistical breakdowns
-- **Tableau Dashboard**: Regional BMI vs cost comparison, demographic breakdown tables
-- **Risk Segmentation**: High-risk group identification through systematic categorization
-- **Methodology Comparison**: Comprehensive SQL vs Tableau analysis report
-
 ### 💼 Business Impact
 - **Risk-based pricing strategy**: Clear premium multipliers by risk factors
 - **Geographic insights**: 15-20% regional rate adjustments recommended  
@@ -64,39 +58,56 @@ This project examines how various social factors influence high school graduatio
 
 ---
 
-## 🕵️ Project 3: COVID-19 and Crime Rate Analysis  
-**Date**: April 2024  
-**Tools**: R, tidyverse, ggplot2, plotly, changepoint, effsize 
+## 🚔 Project 3: Chicago Crime Analysis - COVID-19 Impact Study
+**Date**: April 2024 (Updated: January 2025)  
+**Tools**: R (Advanced Statistical Analysis), tidyverse, plotly, changepoint detection, automated reporting
 
 ### 🔍 Overview  
-This project provides a comprehensive analysis of crime trends in Chicago **before, during, and after** the COVID-19 pandemic. Leveraging publicly available data from the Chicago Police Department and advanced statistical techniques, the project quantifies the pandemic’s impact on crime patterns.
+**Enterprise-grade statistical analysis** of Chicago crime patterns examining COVID-19 pandemic impact. This project demonstrates **professional data science workflows** with modular architecture, rigorous statistical testing, and automated report generation - processing **6.5M+ crime records** from 2017-2023.
 
-### 📌 Key Insights  
-- 📉 **Significant Reductions**: Crime rates dropped noticeably during the pandemic due to lockdowns and reduced public activity.
+### 📌 Key Statistical Findings  
+- **Statistically significant impact**: Kruskal-Wallis test confirmed significant differences across pandemic periods (**p = 0.0154**)
+- **Effect size quantification**: Cohen's d analysis revealed **medium to large effects** in key comparisons
+- **Crime reduction during pandemic**: Significant decrease in daily crime rates during lockdown periods
+- **Incomplete recovery**: Post-pandemic crime patterns show **persistent structural changes**
+- **Crime type variations**: Different categories showed distinct pandemic response patterns
 
-- 📊 **Statistical Validation**: Kruskal-Wallis and post-hoc Wilcoxon tests confirmed significant differences in crime levels across the three periods (pre-, during-, post-pandemic).
+### 🔬 Technical Implementation
+- **Modular architecture**: 6-script pipeline with automated execution (`analysis.R`)
+- **Statistical rigor**: Non-parametric testing, effect size calculations, change point detection
+- **Data engineering**: Processed 1.7GB dataset → optimized aggregated format for reproducibility
+- **Quality assurance**: Comprehensive error handling, data validation, progress tracking
+- **Publication-ready outputs**: High-resolution visualizations (300 DPI), automated reports
 
-- 🧠 **Effect Sizes**: Cohen’s d revealed medium to large effect sizes in key crime categories.
+### 📊 Advanced Analytics
+- **Time series analysis**: Monthly trends with 3-month moving averages
+- **Change point detection**: PELT algorithm for identifying structural breaks
+- **Geographic analysis**: Spatial outlier removal and location-based patterns  
+- **Multi-dimensional comparison**: Crime type × location × temporal analysis
+- **Recovery assessment**: Post-pandemic restoration patterns by category
 
-- 🔁 **Incomplete Recovery**: While some crime types rebounded after 2021, others remained significantly lower or changed in character.
+### 🏗 Professional Workflow
+- **One-click reproducibility**: Complete analysis via single command
+- **Modular design**: Separated data processing, statistical analysis, visualization, reporting
+- **Legacy integration**: Preserved and enhanced previous analytical approaches
+- **Version control**: Comprehensive documentation and methodology tracking
+- **Scalable architecture**: Designed for extension to other cities/datasets
 
-- 📋 **Policy Implications**: Suggested sustaining certain public safety measures post-pandemic to preserve lower crime rates.
+### 💼 Business Applications
+- **Policy evaluation**: Quantified impact of pandemic restrictions on public safety
+- **Resource allocation**: Data-driven insights for law enforcement deployment
+- **Trend forecasting**: Established baseline for post-pandemic crime predictions
+- **Methodology framework**: Reusable analytical pipeline for urban crime studies
 
-### 📈 Visualizations  
-- 📅 **Time Series Plots**: Crime trends by month, annotated by pandemic phase
-
-- 🗺 **Geographic Heatmaps**: Crime intensity by location across periods
-
-- 🧮 **Distribution Plots**: Boxplots and density charts showing spread and central tendencies
-
-- 📊 **Interactive Charts**: Plotly-based tools for exploring trends by type, location, and time
-
-🔗 [View Full Analysis](https://github.com/vkdlxj008/jk/blob/main/crimes)  Includes one-click reproducible analysis, pre-processed data, statistical scripts, and auto-generated reports.
+🔗 [View Complete Analysis](https://github.com/vkdlxj008/jk/tree/main/crimes) - Full reproducible pipeline with one-click execution  
+📊 [Technical Documentation](https://github.com/vkdlxj008/jk/blob/main/crimes/README.md) - Detailed methodology and implementation  
+📈 [Statistical Results](https://github.com/vkdlxj008/jk/tree/main/crimes/outputs) - Automated reports and visualizations
 
 ---
 
 ## 🧠 Skills Demonstrated  
-- Data wrangling & visualization in R and Tableau  
-- Statistical testing (ANOVA, regression, p-values)  
-- Demographic & temporal trend analysis  
-- Policy recommendation based on data insights
+- **Statistical Analysis**: ANOVA, non-parametric testing, effect size calculation, time series analysis
+- **Data Engineering**: Large dataset processing, outlier detection, automated data validation  
+- **Visualization**: Advanced ggplot2, interactive plotly dashboards, publication-quality graphics
+- **Software Engineering**: Modular design, error handling, automated workflows, version control
+- **Business Intelligence**: Policy recommendation, trend analysis, actionable insights generation
