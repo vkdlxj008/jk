@@ -30,7 +30,7 @@ str(daily_crimes_raw)
 cat("📅 Converting dates and classifying periods...\n")
 
 # Date conversion (supports multiple formats)
-daily_crimes <- daily_crimes_raw %>%
+daily_crimes <- daily_crimes_raw |>
   mutate(
     # Attempt date conversion (considering multiple formats)
     Date = case_when(
@@ -55,7 +55,7 @@ daily_crimes <- daily_crimes_raw %>%
 
     # Crime counts (use 'count' column if exists, otherwise assume 1)
     crime_counts = if("count" %in% colnames(daily_crimes_raw)) count else 1
-  ) %>%
+  ) |>
   filter(!is.na(Date), Period != "Other") |>
   arrange(Date)
 
@@ -88,8 +88,8 @@ if(file.exists("data/monthly_summary.csv")) {
   cat("✅ Monthly summary loaded:", nrow(monthly_summary), "rows\n")
 } else {
   cat("⚠️ Monthly summary data not found. Generating from daily data.\n")
-  monthly_summary <- daily_crimes %>%
-    group_by(YearMonth, Year, Primary.Type, Location.Description) %>%
+  monthly_summary <- daily_crimes |>
+    group_by(YearMonth, Year, Primary.Type, Location.Description) |>
     summarise(
       total_crimes = sum(crime_counts, na.rm = TRUE),
       days_with_crime = n(),
@@ -115,7 +115,7 @@ if(file.exists("data/crime_types_summary.csv")) {
       last_recorded = max(Date, na.rm = TRUE),
       years_active = n_distinct(Year),
       .groups = "drop"
-    ) %>%
+    ) |>
     arrange(desc(total_incidents))
 }
 
@@ -160,8 +160,8 @@ crime_type_analysis <- daily_crimes |>
     total_crimes = Before + During + After,
     pct_change_during = ifelse(Before > 0, ((During - Before) / Before) * 100, 0),
     pct_change_after = ifelse(Before > 0, ((After - Before) / Before) * 100, 0)
-  ) %>%
-  filter(total_crimes >= 50) %>%  # Only crimes with sufficient data
+  ) |>
+  filter(total_crimes >= 50) |>  # Only crimes with sufficient data
   arrange(desc(total_crimes))
 
 cat("✅ Data prepared for analysis\n")
