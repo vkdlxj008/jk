@@ -1,46 +1,46 @@
 # ===============================================
-# 📦 패키지 로드 및 설정
+# 📦 Package Loading and Configuration
 # ===============================================
 
-# 필요한 패키지들
+# Required packages
 required_packages <- c(
-  "tidyverse",      # 데이터 처리
-  "lubridate",      # 날짜 처리  
-  "plotly",         # 인터랙티브 플롯
-  "viridis",        # 컬러 팔레트
-  "effsize",        # Effect size 계산
+  "tidyverse",      # Data processing
+  "lubridate",      # Date processing
+  "plotly",         # Interactive plots
+  "viridis",        # Color palette
+  "effsize",        # Effect size calculation
   "changepoint",    # Change point detection
-  "zoo",            # 시계열 처리
-  "scales",         # 플롯 스케일링
-  "gridExtra",      # 다중 플롯
-  "RColorBrewer",   # 컬러 팔레트
-  "knitr",          # 테이블 생성
-  "corrplot"        # 상관관계 플롯
+  "zoo",            # Time series processing
+  "scales",         # Plot scaling
+  "gridExtra",      # Multiple plots
+  "RColorBrewer",   # Color palette
+  "knitr",          # Table generation
+  "corrplot"        # Correlation plot
 )
 
-# 패키지 설치 및 로드
+# Install and load packages
 install_if_missing <- function(packages) {
   new_packages <- packages[!(packages %in% installed.packages()[,"Package"])]
   if(length(new_packages)) {
-    cat("📦 새 패키지 설치 중:", paste(new_packages, collapse = ", "), "\n")
+    cat("📦 Installing new packages:", paste(new_packages, collapse = ", "), "\n")
     install.packages(new_packages, dependencies = TRUE)
   }
 }
 
 install_if_missing(required_packages)
 
-# 패키지 로드
+# Load packages
 suppressPackageStartupMessages({
   lapply(required_packages, library, character.only = TRUE)
 })
 
-cat("✅ 모든 패키지 로드 완료\n")
+cat("✅ All packages loaded successfully\n")
 
 # ===============================================
-# 🎨 시각화 테마 설정
+# 🎨 Visualization Theme Settings
 # ===============================================
 
-# 사용자 정의 테마
+# Custom theme
 theme_crime_analysis <- function() {
   theme_minimal() +
     theme(
@@ -56,59 +56,59 @@ theme_crime_analysis <- function() {
     )
 }
 
-# 기본 테마로 설정
+# Set as default theme
 theme_set(theme_crime_analysis())
 
-# 컬러 팔레트 정의
+# Define color palette
 pandemic_colors <- c(
-  "Before" = "#E31A1C",   # 빨강 (팬데믹 전)
-  "During" = "#33A02C",   # 초록 (팬데믹 중)  
-  "After" = "#1F78B4"     # 파랑 (팬데믹 후)
+  "Before" = "#E31A1C",   # Red (Pre-pandemic)
+  "During" = "#33A02C",   # Green (During pandemic)
+  "After" = "#1F78B4"     # Blue (Post-pandemic)
 )
 
 # ===============================================
-# 📁 디렉토리 구조 생성
+# 📁 Directory Structure Creation
 # ===============================================
 
-# 필요한 디렉토리들
+# Required directories
 dirs <- c(
   "data/raw", "data/processed",
   "outputs/plots/pandemic_impact",
-  "outputs/plots/temporal_analysis", 
+  "outputs/plots/temporal_analysis",
   "outputs/plots/crime_types",
   "outputs/tables",
   "outputs/reports",
   "legacy/outputs"
 )
 
-# 디렉토리 생성
+# Create directories
 for(dir in dirs) {
   if(!dir.exists(dir)) {
     dir.create(dir, recursive = TRUE)
-    cat("📁 디렉토리 생성:", dir, "\n")
+    cat("📁 Creating directory:", dir, "\n")
   }
 }
 
-cat("✅ 프로젝트 구조 설정 완료\n")
+cat("✅ Project structure setup complete\n")
 
 # ===============================================
-# ⚙️ 전역 설정
+# ⚙️ Global Settings
 # ===============================================
 
-# 데이터 파일 경로
+# Data file path
 DATA_PATH <- "C:/Users/BYU Rental/Downloads/Crimes.csv"
 PROCESSED_DATA_PATH <- "C:/Users/BYU Rental/Downloads"
 
-# 아웃라이어 제거 기준
+# Outlier removal threshold
 OUTLIER_THRESHOLD <- 3
 
-# 팬데믹 기간 정의
+# Define pandemic periods
 PANDEMIC_START <- as.Date("2020-03-01")
 ENDEMIC_START <- as.Date("2022-01-01")
 
-# 플롯 저장 설정
+# Plot saving settings
 PLOT_WIDTH <- 12
 PLOT_HEIGHT <- 8
 PLOT_DPI <- 300
 
-cat("⚙️ 전역 설정 완료\n\n")
+cat("⚙️ Global settings complete\n\n")
