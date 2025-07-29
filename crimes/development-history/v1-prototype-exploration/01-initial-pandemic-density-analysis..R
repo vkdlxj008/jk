@@ -5,7 +5,7 @@
 library(tidyverse)
 library(lubridate)
 
-# 데이터 로드 및 정제
+# Data Load and Refine
 
 subject <- read.csv("Crimes.csv")
 subject_clean <- subject[complete.cases(subject$X.Coordinate, subject$Y.Coordinate, subject$Year), ]
@@ -26,7 +26,7 @@ subject_clean1 <- subject_clean %>%
   summarize(crime_counts = n()) %>%
   mutate(Year = year(Day))
 
-# 펜데믹 기간별 데이터 필터링 및 "Period" 열 추가
+# Data filtering by pandemic period and adding "Period" columns
 pandemic_before <- subject_clean1 %>%
   filter(Year >= 2017 & Year <= 2019) %>%
   mutate(Period = "Pandemic Before")
@@ -38,7 +38,7 @@ pandemic_after <- subject_clean1 %>%
   mutate(Period = "Pandemic After")
 
 
-# 히스토그램 그리기
+# Draw a histogram
 ggplot() +
   geom_density(data = pandemic_before, aes(x = crime_counts, fill = Period), alpha = 0.5) +
   geom_density(data = pandemic_period, aes(x = crime_counts, fill = Period), alpha = 0.5) +
