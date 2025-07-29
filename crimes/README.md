@@ -32,11 +32,17 @@ crimes/
 │   ├── 03_statistical_analysis_updated.R # 📊 Statistical tests
 │   ├── 04_visualization_updated.R # 📈 Advanced visualizations
 │   └── 05_generate_report_updated.R # 📋 Automated reporting
-├── legacy/                     # 🗂 Original development files
-│   ├── README.md              # Legacy documentation
-│   ├── crimes.R               # Original analysis script
-│   ├── analysis_enhancement.R  # Enhanced version
-│   ├── analysis_some_statistical_validation.R # Statistical tests
+├── development-history/                     # 🗂 Original development files
+│   ├── README.md                 # development-history documentation
+│   ├── v1-prototype-exploration  # Original analysis script
+│   │   └── 01-initial-pandemic-density-analysis.R          
+│   ├── v2-statistical-valiation  # Statistical tests
+│   │   └── 02-statistical-methods-exploration.R
+│   ├── v3-comprehensive-analysis # Enhanced version 
+│   │   └── 03-comprehensive-pandemic-impact-study.R
+│   ├── v4-data-infrastructure    # data preprocessing & processing
+│   │   ├── 04a-raw-data-preprocessing.R
+│   │   └── 04b-summary-data-generation.R
 │   └── outputs/               # Original outputs
 ├── outputs/
 │   ├── plots/                  # 📈 Generated visualizations
