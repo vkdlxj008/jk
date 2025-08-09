@@ -1,12 +1,26 @@
 # 🎓 Project 2: High School Graduation Rate Analysis
 
->**This project examines how various social factors influence high school graduation rates across 50 U.S. states from 2011 to 2017.**
+>****
 
 ## 📊 Project Overview
-This project was conducted in collaboration with Ethan Gertsch and Johnny Lam. My role in the project involved data short sampling, analysis by data modeling **ANOVA** and **linear regression**, and **facet plot** to visualize high school graduation rates across the 50 states, along with variables that may negatively impact graduation rates.
+This project examines how various social factors influence high school graduation rates across 50 U.S. states from 2011 to 2017 for Group project of STAT250 BYU. My role in the project involved data short sampling, analysis by data modeling **ANOVA** and **linear regression**, and **facet plot** to visualize high school graduation rates across the 50 states, along with variables that may negatively impact graduation rates.
+
+- 📚 Source: National Center for Education Statistics (NCES)
+- 🏛️ Collected by: Administrative Data Division, U.S. Dept. of Education
+- 🔐 Usage Rights: Governed by the Freedom of Information Act (FOIA)
+- 📅 Timeframe: 2011 to 2017
+- 👨‍🎓 Variables: Graduation Rate, School Violence, Bullying, Alcohol Use
+
+## 🤝 Team and Contributions
+- Ethan Gertsch
+- Johnny Lam
+- Jun Kim
+
+## 📊 Key Research Questions
 
 
-Data Pedigree and Terms of Service
+
+## Data Pedigree and Terms of Service
 The data for this research is primarily gathered from the National Center for Educational Statistics. 
 The NCES is part of the United States Department of Education and was created to be the principal organization to collect, analyze, and publish US education statistics.
 Within the NCES, a separate arm called the Administrative Data Division collects data by surveying schools across the United States. 
@@ -17,7 +31,7 @@ the terms of service are regulated by the Freedom of Information Act which provi
 Thus there are no concerns for this data’s use in a school research project.
 
 
-Works Cited
+## 📚 Works Cited
 1. National Center for Education Statistics. (2023). Table 219.46. Public high school 4-year adjusted cohort graduation rate
 (ACGR), by selected student characteristics and state or jurisdiction: School years 2011-12 through 2021-22. U.S. Department of
 Education, Institute of Education Sciences.
@@ -30,6 +44,5 @@ Retrieved from https://repository.library.northeastern.edu/downloads/neu:376324?
 Enterprises in association with Peter D. Hart Research Associates for the Bill & Melinda Gates Foundation. Retrieved from
 https://files.eric.ed.gov/fulltext/ED513444.pdf
 4. Moretti, E. (2005). Does education reduce participation in criminal activities? Department of Economics, UC Berkeley. Retrieved
-from
-https://web.archive.org/web/20181205193458/https://pdfs.semanticscholar.org/1468/65bf387c876041f043134afdd4365b912801.pdf
+from https://web.archive.org/web/20181205193458/https://pdfs.semanticscholar.org/1468/65bf387c876041f043134afdd4365b912801.pdf
 
