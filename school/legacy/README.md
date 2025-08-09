@@ -1,6 +1,9 @@
-This project was conducted in collaboration with Ethan Gertsch and Johnny Lam. 
-My role in the project involved data short sampling, analysis through ANOVA and linear regression, 
-and coding plots to visualize high school graduation rates across the 50 states, along with variables that may negatively impact graduation rates.
+# 🎓 Project 2: High School Graduation Rate Analysis
+
+>**This project examines how various social factors influence high school graduation rates across 50 U.S. states from 2011 to 2017.**
+
+## 📊 Project Overview
+This project was conducted in collaboration with Ethan Gertsch and Johnny Lam. My role in the project involved data short sampling, analysis by data modeling **ANOVA** and **linear regression**, and **facet plot** to visualize high school graduation rates across the 50 states, along with variables that may negatively impact graduation rates.
 
 
 Data Pedigree and Terms of Service
