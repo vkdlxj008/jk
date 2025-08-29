@@ -1,9 +1,7 @@
 -- Insurance Data Analysis SQL Query
 -- data: insurance_analysis.insurance_data
 
--- =============================================================================
 -- 1. Comparative Analysis of Smokers vs. Non-Smokers Insurance Premiums
--- =============================================================================
 
 -- 1-1. Basic statistics by smoking status
 SELECT 
@@ -28,9 +26,7 @@ SELECT
          (SELECT AVG(charges) FROM insurance_analysis.insurance_data WHERE smoker = 'no') - 1) * 100, 2
     ) AS Smokers_Increase_rate_percent;
 
--- =============================================================================
 -- 2. Analysis of premiums by region
--- =============================================================================
 
 -- 2-1. Basic statistics by region
 SELECT 
@@ -55,9 +51,7 @@ FROM insurance_analysis.insurance_data
 GROUP BY region
 ORDER BY smoker_rate_percent DESC;
 
--- =============================================================================
 -- 3. BMI and Insurance Premium Relationship Analysis
--- =============================================================================
 
 -- 3-1. Insurance premium analysis by BMI category
 SELECT 
@@ -101,9 +95,7 @@ GROUP BY
     END, smoker
 ORDER BY BMI_category, smoking_status;
 
--- =============================================================================
 -- 4. Insurance Premium Difference Analysis by Number of Children
--- =============================================================================
 
 -- 4-1. Basic statistics by number of children
 SELECT 
@@ -138,9 +130,7 @@ GROUP BY children,
     END
 ORDER BY number_of_children, age_group;
 
--- =============================================================================
 -- 5. Comprehensive Analysis: Multiple Factor Analysis
--- =============================================================================
 
 -- 5-1. High-risk group identification considering all factors
 SELECT 
