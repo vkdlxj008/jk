@@ -67,7 +67,8 @@ We reconstructed the original R analysis in Python to ensure reproducibility and
 **Tools**: R (Advanced Statistical Analysis), tidyverse, plotly, changepoint detection, automated reporting
 
 ### 🔍 Overview  
-Comprehensive statistical analysis of Chicago crime patterns during the COVID-19 pandemic. The project uses a modular workflow with statistical testing and automated report generation, processing 6.5M+ crime records from 2017–2023.
+**Full-scale statistical deep dive** into Chicago crime patterns during the COVID-19 pandemic. This project was built with a modular pipeline, heavy-duty statistical testing, and automated reporting — crunching through **6.5M+ crime records** from 2017–2023.
+Honestly, it was a bit of a grind, but the result is a complete end-to-end workflow you can run with a single command.
 
 ### 📌 Key Statistical Findings  
 - **Statistically significant impact**: Kruskal-Wallis test confirmed significant differences across pandemic periods (**p = 0.0154**)
