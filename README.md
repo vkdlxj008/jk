@@ -37,11 +37,9 @@ Comprehensive dual-methodology analysis of healthcare insurance costs using both
 
 ---
 
-🎓 Project 2: High School Graduation Rate Analysis  
+## 🎓 Project 2: High School Graduation Rate Analysis  
 Date: December 2024 → **Updated: September 2025**  
 Tools: **R (ggplot2), Python (pandas, statsmodels, plotnine, matplotlib)**
-
----
 
 ## 🔍 Overview
 This project examines how social factors relate to U.S. high school graduation rates (ACGR) across 50 states from 2011–2017.  
