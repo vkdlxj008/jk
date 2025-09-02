@@ -38,14 +38,14 @@ Comprehensive dual-methodology analysis of healthcare insurance costs using both
 ---
 
 ## 🎓 Project 2: High School Graduation Rate Analysis  
-Date: December 2024 → **Updated: September 2025**  
-Tools: **R (ggplot2), Python (pandas, statsmodels, plotnine, matplotlib)**
+**Date**: December 2024 → **Updated: September 2025**  
+**Tools**: **R (ggplot2), Python (pandas, statsmodels, plotnine, matplotlib)**
 
-## 🔍 Overview
+### 🔍 Overview
 This project examines how social factors relate to U.S. high school graduation rates (ACGR) across 50 states from 2011–2017.  
 We reconstructed the original R analysis in Python to ensure reproducibility and parity across ecosystems.
 
-## 📌 Key Insights (ANOVA & OLS)
+### 📌 Key Insights (ANOVA & OLS)
 - **Alcohol use** shows a statistically significant negative association with ACGR  
   *(ANOVA F=6.73, p=0.0106; OLS β=-0.201, p=0.011)*.
 - **Weapon presence** in schools has a near-significant association with ACGR  
@@ -55,7 +55,7 @@ We reconstructed the original R analysis in Python to ensure reproducibility and
 
 > Note: Python results replicate the R outputs to 3–4 decimal places.
 
-## 📈 Visualizations
+### 📈 Visualizations
 - **Faceted time-series** by state showing ACGR, Alcohol, Bullying, Cyberbullying, and Weapon reporting.  
   - PNG: [`school/outputs/Factors_Influencing_Fradutation_Rates_by_Year_and_State.PNG`](school/outputs/Factors_Influencing_Fradutation_Rates_by_Year_and_State.PNG)  
   - Python (plotnine) export: `school/outputs/facet_plot.png` (created on run)
