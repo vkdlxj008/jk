@@ -37,24 +37,30 @@ Comprehensive dual-methodology analysis of healthcare insurance costs using both
 
 ---
 
-## 🎓 Project 2: High School Graduation Rate Analysis  
-**Date**: December 2024  
-**Tools**: R, ggplot2  
+🎓 Project 2: High School Graduation Rate Analysis  
+Date: December 2024 → **Updated: September 2025**  
+Tools: **R (ggplot2), Python (pandas, statsmodels, plotnine, matplotlib)**
 
-### 🔍 Overview  
-This project examines how various social factors influence high school graduation rates across 50 U.S. states from 2011 to 2017.
+---
 
-### 📌 Key Insights  
-- **Alcohol use** has a statistically significant negative effect on graduation rates (**p = 0.0106**).  
-- **Weapon presence in schools** also shows a near-significant impact (**p = 0.0573**).  
-- Despite consistent graduation rate increases nationwide, bullying and cyberbullying persist over time.
+## 🔍 Overview
+This project examines how social factors relate to U.S. high school graduation rates (ACGR) across 50 states from 2011–2017.  
+We reconstructed the original R analysis in Python to ensure reproducibility and parity across ecosystems.
 
-### 📈 Visualizations  
-- Faceted time-series plots by state, showing:  
-  - Graduation Rate (ACGR)  
-  - Alcohol use, bullying, cyberbullying, and weapon reporting
+## 📌 Key Insights (ANOVA & OLS)
+- **Alcohol use** shows a statistically significant negative association with ACGR  
+  *(ANOVA F=6.73, p=0.0106; OLS β=-0.201, p=0.011)*.
+- **Weapon presence** in schools has a near-significant association with ACGR  
+  *(ANOVA F=4.46, p≈0.0368; OLS β≈-0.520, p≈0.057)*.
+- **Bullying** and **cyberbullying** trends persist but are **not significant** predictors in the multivariate model here.
+- Model fit (Python OLS): **R² ≈ 0.102, Adj. R² ≈ 0.073**, *F*(4,122)=3.47, **p=0.0101**.
 
-🔗 [View Full Analysis](https://github.com/vkdlxj008/jk/blob/main/school/drop_rate.R)
+> Note: Python results replicate the R outputs to 3–4 decimal places.
+
+## 📈 Visualizations
+- **Faceted time-series** by state showing ACGR, Alcohol, Bullying, Cyberbullying, and Weapon reporting.  
+  - PNG: [`school/outputs/Factors_Influencing_Fradutation_Rates_by_Year_and_State.PNG`](school/outputs/Factors_Influencing_Fradutation_Rates_by_Year_and_State.PNG)  
+  - Python (plotnine) export: `school/outputs/facet_plot.png` (created on run)
 
 ---
 
