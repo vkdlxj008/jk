@@ -48,12 +48,12 @@ We reconstructed the original R analysis in Python to ensure reproducibility and
 ### 📌 Key Insights (ANOVA & OLS)
 - **Alcohol use** shows a statistically significant negative association with ACGR  
   *(ANOVA F=6.73, p=0.0106; OLS β=-0.201, p=0.011)*.
-- **Weapon presence** in schools has a near-significant association with ACGR  
+- **Weapon presence** in schools shows a modest association with ACGR  
   *(ANOVA F=4.46, p≈0.0368; OLS β≈-0.520, p≈0.057)*.
 - **Bullying** and **cyberbullying** trends persist but are **not significant** predictors in the multivariate model here.
 - Model fit (Python OLS): **R² ≈ 0.102, Adj. R² ≈ 0.073**, *F*(4,122)=3.47, **p=0.0101**.
 
-> Note: Python results replicate the R outputs to 3–4 decimal places.
+> The Python implementation reproduced the R results consistently.
 
 ### 📈 Visualizations
 - **Faceted time-series** by state showing ACGR, Alcohol, Bullying, Cyberbullying, and Weapon reporting.  
@@ -67,7 +67,7 @@ We reconstructed the original R analysis in Python to ensure reproducibility and
 **Tools**: R (Advanced Statistical Analysis), tidyverse, plotly, changepoint detection, automated reporting
 
 ### 🔍 Overview  
-**Enterprise-grade statistical analysis** of Chicago crime patterns examining COVID-19 pandemic impact. This project demonstrates **professional data science workflows** with modular architecture, rigorous statistical testing, and automated report generation - processing **6.5M+ crime records** from 2017-2023.
+Comprehensive statistical analysis of Chicago crime patterns during the COVID-19 pandemic. The project uses a modular workflow with statistical testing and automated report generation, processing 6.5M+ crime records from 2017–2023.
 
 ### 📌 Key Statistical Findings  
 - **Statistically significant impact**: Kruskal-Wallis test confirmed significant differences across pandemic periods (**p = 0.0154**)
