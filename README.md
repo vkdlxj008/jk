@@ -5,7 +5,7 @@ Welcome! This repository showcases three data analysis projects focusing on real
 ---
 
 ## 🏥 Project 1: Insurance Cost Analysis  
-**Date**: August 2024  
+**Date**: August 2024  → **Updated: July 2025**
 **Tools**: SQL (Advanced Analysis), Tableau (Interactive Dashboard)
 
 ### 🔍 Overview  
@@ -63,7 +63,7 @@ We reconstructed the original R analysis in Python to ensure reproducibility and
 ---
 
 ## 🚔 Project 3: Chicago Crime Analysis - COVID-19 Impact Study
-**Date**: April 2024 (Updated: January 2025)  
+**Date**: April 2024 → **Updated: August 2025**
 **Tools**: R (Advanced Statistical Analysis), tidyverse, plotly, changepoint detection, automated reporting
 
 ### 🔍 Overview  
