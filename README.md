@@ -5,7 +5,7 @@ Welcome! This repository showcases three data analysis projects focusing on real
 ---
 
 ## 🏥 Project 1: Insurance Cost Analysis  
-**Date**: August 2024  → **Updated: July 2025**
+**Date**: August 2024  → **Updated: July 2025**   
 **Tools**: SQL (Advanced Analysis), Tableau (Interactive Dashboard)
 
 ### 🔍 Overview  
