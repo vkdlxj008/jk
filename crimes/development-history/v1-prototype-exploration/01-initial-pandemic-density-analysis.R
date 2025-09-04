@@ -20,21 +20,21 @@ remove_outliers <- function(data, variable, deviation_threshold = 3) {
 subject_clean <- remove_outliers(subject_clean, "X.Coordinate")
 subject_clean <- remove_outliers(subject_clean, "Y.Coordinate")
 
-subject_clean1 <- subject_clean %>%
-  mutate(Day = as.Date(mdy_hms(Date))) %>%
-  group_by(Day) %>%
-  summarize(crime_counts = n()) %>%
+subject_clean1 <- subject_clean |>
+  mutate(Day = as.Date(mdy_hms(Date))) |>
+  group_by(Day) |>
+  summarize(crime_counts = n()) |>
   mutate(Year = year(Day))
 
 # Data filtering by pandemic period and adding "Period" columns
-pandemic_before <- subject_clean1 %>%
-  filter(Year >= 2017 & Year <= 2019) %>%
+pandemic_before <- subject_clean1 |>
+  filter(Year >= 2017 & Year <= 2019) |>
   mutate(Period = "Pandemic Before")
-pandemic_period <- subject_clean1 %>%
-  filter(Year >= 2019 & Year <= 2022) %>%
+pandemic_period <- subject_clean1 |>
+  filter(Year >= 2019 & Year <= 2022) |>
   mutate(Period = "Pandemic Period")
-pandemic_after <- subject_clean1 %>%
-  filter(Year >= 2022 & Year <= 2023) %>%
+pandemic_after <- subject_clean1 |>
+  filter(Year >= 2022 & Year <= 2023) |>
   mutate(Period = "Pandemic After")
 
 
@@ -48,3 +48,4 @@ ggplot() +
   scale_fill_manual(values = c("Pandemic Before" = "red", "Pandemic Period" = "green", "Pandemic After" = "blue"))
 
 ggsave('Pandemic_Density.png')
+
