@@ -29,13 +29,13 @@ subject_clean1 <- subject_clean |>
 # Data filtering by pandemic period and adding "Period" columns
 pandemic_before <- subject_clean1 |>
   filter(Year >= 2017 & Year <= 2019) |>
-  mutate(Period = "Pandemic Before")
+  mutate(Period = "Before Pandemic")
 pandemic_period <- subject_clean1 |>
   filter(Year >= 2019 & Year <= 2022) |>
   mutate(Period = "Pandemic Period")
 pandemic_after <- subject_clean1 |>
   filter(Year >= 2022 & Year <= 2023) |>
-  mutate(Period = "Pandemic After")
+  mutate(Period = "After Pandemic")
 
 
 # Draw a histogram
@@ -48,4 +48,5 @@ ggplot() +
   scale_fill_manual(values = c("Pandemic Before" = "red", "Pandemic Period" = "green", "Pandemic After" = "blue"))
 
 ggsave('Pandemic_Density.png')
+
 
