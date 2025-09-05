@@ -1,0 +1,40 @@
+{
+  "config": {
+    "threshold": 85.0,
+    "features": [
+      "alcohol",
+      "bully",
+      "cyberbully",
+      "weapon_state",
+      "year"
+    ],
+    "categorical": [
+      "state"
+    ],
+    "target": "acgr_ge_threshold",
+    "split_strategy": "Expanding (<=t-1 -> t)",
+    "created_at": "20250905_152303"
+  },
+  "artifacts": {
+    "results_csv": [
+      "artifacts\\class_ratio_by_year_20250905_152303.csv",
+      "artifacts\\Logit_by_year_20250905_152303.csv",
+      "artifacts\\RF_by_year_20250905_152303.csv"
+    ],
+    "results_pkl": [
+      "artifacts\\Logit_by_year_20250905_152303.pkl",
+      "artifacts\\RF_by_year_20250905_152303.pkl"
+    ],
+    "models": {
+      "Logit": "artifacts\\model_Logit_20250905_152303.joblib",
+      "RF": "artifacts\\model_RF_20250905_152303.joblib"
+    }
+  },
+  "summary": {
+    "class_ratio_all": {
+      "1": 0.5166666666666667,
+      "0": 0.48333333333333334
+    },
+    "class_ratio_by_year_csv": "artifacts\\class_ratio_by_year_20250905_152303.csv"
+  }
+}
